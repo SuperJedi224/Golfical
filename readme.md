@@ -76,7 +76,7 @@ Instructions:
 0E0003 Divide the target of the pointer by the value in the next cell, rounding towards zero
 0E0004 Find the greatest common denominator of the target of the pointer and the value in the next cell
 0E0005 Find the least common multiple of the target of the pointer and the value in the next cell
-
+0E0006 Take the target of the pointer modulo the value in the next cell
 0E0100 Take the target of the pointer bitwise or the value in the next cell
 0E0101 Take the target of the pointer bitwise and the value in the next cell
 0E0102 Take the target of the pointer bitwise xor the value in the next cell

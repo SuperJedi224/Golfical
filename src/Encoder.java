@@ -25,7 +25,7 @@ static List<String>col=Arrays.asList(
 		"0E0101","0E0102","0E0103","0E0104","0E0105",
 		"0E0106","0E0200","0E0201","0E0300","0E0301",
 		"0F0000","0F0001","0F0002","0F0003","100000",
-		"100001","100002","100003"
+		"100001","100002","100003","0E0006"
 );
 static int ct=0;
 static void write(int b,OutputStream p) throws Exception{
