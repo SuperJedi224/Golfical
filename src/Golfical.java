@@ -40,10 +40,15 @@ public class Golfical{
 	static Tape theTape=new Tape();
 	static Random r=new Random();
 	static Stack<Integer> stack=new Stack<Integer>();
-	public static void main(String[]args) throws IOException{
+	public static void main(String[]args) throws Exception{
 		String fname;
 		if(args.length>0){
-			fname=args[0];
+			if(args[0].equals("-x")){
+				Encoder.from(new File(args[1]),args[1]+".png");
+				fname=args[1]+".png";
+			}else{
+				fname=args[0];
+			}			
 		}else{
 			fname=new Scanner(System.in).nextLine();
 		}
