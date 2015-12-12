@@ -243,6 +243,8 @@ public class Golfical{
 			}
 			if(s.equals("0E0200"))theTape.set(-theTape.get());
 			if(s.equals("0E0201"))theTape.set(~theTape.get());
+			if(s.equals("0E0300")&&isPrime(theTape.get()))d=cw(d);
+			if(s.equals("0E0301")&&gcd(theTape.currentCell.value,theTape.currentCell.getNext().value)==1)d=cw(d);
 			if(s.equals("0F0000"))theTape.spliceOutLeft();
 			if(s.equals("0F0001"))theTape.spliceOutRight();
 			if(s.equals("0F0002"))theTape.spliceBefore();
@@ -261,5 +263,15 @@ public class Golfical{
 			if(d==W)x--;
 			if(x<0||x>=i.getWidth()||y<0||y>=i.getHeight())break;
 		}
+	}
+	static boolean isPrime(long n) {
+	    if(n < 2) return false;
+	    if(n == 2 || n == 3) return true;
+	    if(n%2 == 0 || n%3 == 0) return false;
+	    long sqrtN = (long)Math.sqrt(n)+1;
+	    for(long i = 6L; i <= sqrtN; i += 6) {
+	        if(n%(i-1) == 0 || n%(i+1) == 0) return false;
+	    }
+	    return true;
 	}
 }
