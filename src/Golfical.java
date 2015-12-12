@@ -113,6 +113,9 @@ public class Golfical{
 			if(s.equals("0A0101")){
 				System.out.print((char)theTape.get());
 			}
+			if(s.equals("0A0200")){
+				System.out.println(REG);
+			}
 			if(s.startsWith("0B000")){
 				d=s.charAt(5)-48;
 			}
