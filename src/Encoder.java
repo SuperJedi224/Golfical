@@ -39,11 +39,11 @@ static void write(byte[]b,OutputStream p) throws Exception{
 public static void to(File src,String name) throws Exception{
 	BufferedImage img=ImageIO.read(src);
 	OutputStream p=new FileOutputStream(new File(name));
-	String s=Integer.toString(img.getWidth(),2),t=Integer.toString(img.getHeight(),2);
-	while(s.length()<12)s="0"+s;
-	while(t.length()<12)t="0"+t;
-	s+=t;
-	write(new byte[]{(byte)Integer.parseInt(s.substring(0,8),2),(byte)Integer.parseInt(s.substring(9,16),2),(byte)Integer.parseInt(s.substring(16),2)},p);
+	int t=4096*img.getWidth()+img.getHeight();
+	String s=Integer.toBinaryString(t);
+	while(s.length()<24)s="0"+s;
+	System.out.println(s);
+	write(new byte[]{(byte)Integer.parseUnsignedInt(s.substring(0,8),2),(byte)Integer.parseUnsignedInt(s.substring(8,16),2),(byte)Integer.parseUnsignedInt(s.substring(16),2)},p);
 	for(int x=0;x<img.getWidth();x++){
 		for(int y=0;y<img.getHeight();y++){
 			Color c=new Color(img.getRGB(x,y));
