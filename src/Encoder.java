@@ -42,7 +42,6 @@ public static void to(File src,String name) throws Exception{
 	int t=4096*img.getWidth()+img.getHeight();
 	String s=Integer.toBinaryString(t);
 	while(s.length()<24)s="0"+s;
-	System.out.println(s);
 	write(new byte[]{(byte)Integer.parseUnsignedInt(s.substring(0,8),2),(byte)Integer.parseUnsignedInt(s.substring(8,16),2),(byte)Integer.parseUnsignedInt(s.substring(16),2)},p);
 	for(int x=0;x<img.getWidth();x++){
 		for(int y=0;y<img.getHeight();y++){

@@ -196,6 +196,7 @@ public class Golfical{
 			if(s.equals("0E0003"))theTape.currentCell.value/=theTape.currentCell.getNext().value;
 			if(s.equals("0E0004"))theTape.set(gcd(theTape.currentCell.value,theTape.currentCell.getNext().value));
 			if(s.equals("0E0005"))theTape.set(lcm(theTape.currentCell.value,theTape.currentCell.getNext().value));
+			if(s.equals("0E0006"))theTape.set(theTape.currentCell.value%theTape.currentCell.getNext().value);
 			if(s.equals("0E0100"))theTape.set(theTape.currentCell.value|theTape.currentCell.getNext().value);
 			if(s.equals("0E0101"))theTape.set(theTape.currentCell.value&theTape.currentCell.getNext().value);
 			if(s.equals("0E0102"))theTape.set(theTape.currentCell.value^theTape.currentCell.getNext().value);
