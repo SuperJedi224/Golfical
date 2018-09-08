@@ -1,4 +1,5 @@
-##Golfical
+#Golfical
+---
 
 A graphical golfing language, maybe.
 
