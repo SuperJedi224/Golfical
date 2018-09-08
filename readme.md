@@ -1,4 +1,5 @@
-#Golfical
+##Golfical
+
 A graphical golfing language, maybe.
 
 The 2-dimensional program space is encoded as an image file.
