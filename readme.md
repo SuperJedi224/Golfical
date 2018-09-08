@@ -1,11 +1,10 @@
-#Golfical
+Golfical
 ---
 
-A graphical golfing language, maybe.
 
-The 2-dimensional program space is encoded as an image file.
+In Golfical, the 2-dimensional program space is encoded as an image file.
 
-Uses a bidirectionally unbounded tape, a single register, and a stack to store data as 32-bit signed integers.
+The language uses a bidirectionally unbounded tape, a single register, and a stack to store data as 32-bit signed integers.
 
 The instruction pointer starts at the northwesternmost pixel, going east.
 
